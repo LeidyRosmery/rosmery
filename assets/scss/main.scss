@@ -1,0 +1,288 @@
+$color-basic: #BE2525;
+
+body {
+    font-family: 'Roboto', 'Avenir Next', sans-serif;
+    color: #333;
+    background: #310;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.5em !important;
+}
+
+.title-section {
+    font-size: 2em;
+}
+
+.descripcion {
+    font-size: 1em;
+}
+
+.color {
+    color: $color-basic;
+}
+
+header {
+    background: #310;
+}
+/*****que paso ******/
+.segmenter {
+    background-image: url("..img/6.jpg");
+}
+
+.trigger-headline span {
+    color: $color-basic;
+}
+
+.perfil-img {
+    width: 75%;
+    height: auto;
+    margin: 1em 0;
+}
+
+.about,
+.contact,
+.portfolio,
+.skill {
+    background: #fff;
+    font-size: 1em;
+}
+
+.bd-right {
+    border-right: 2px solid $color-basic;
+}
+
+.bd-left {
+    border-left: 2px solid $color-basic;
+}
+
+.pd-section {
+    padding-bottom: 1.5em;
+}
+
+hr {
+    border-top: 2px solid $color-basic;
+    width: 34%;
+}
+
+.badges {
+    width: 20%;
+}
+@mixin colorChange($sourceImg) {
+    // width: 100%;
+    height: 87.5vh;
+    animation: randomColor 50s;
+    -webkit-animation: randomColor 40s;
+    animation-iteration-count: infinite;
+    background-blend-mode: screen;
+    // height: 100%;
+    background-image: url("../img/"+$sourceImg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.skill {
+    @include colorChange("Html_1.jpg");
+    height: 100vh;
+}
+
+.portfolio {
+    height: 100vh;
+}
+
+.contact {
+    @include colorChange("bg.png");
+}
+/*keyframe*/
+@keyframes randomColor {
+    0% {
+        background-color: #f6a270;
+    }
+
+    25% {
+        background-color: #f9b636;
+    }
+
+    50% {
+        background-color: #54da80;
+    }
+
+    75% {
+        background-color: #4d90fe;
+        //background: url("../img/bg.png") #a495ff;
+    }
+
+    100% {
+        background-color: #f6a270;
+    }
+}
+/********************************section portfolio****************************/
+.img-slider {
+    height: 310px;
+}
+
+.rect-case {
+    stroke: $color-basic;
+}
+
+rect[class*="rect-"] {
+    stroke-dasharray: 304;
+    fill: none;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.rectangle-div:hover rect[class*="rect-"] {
+    animation: dashRect 1s ease-out;
+}
+
+.btn-link:hover {
+    color: $color-basic;
+    text-decoration: none;
+}
+
+.rectangle-div {
+    width: 9em;
+    position: relative;
+    display: inline-block;
+}
+@keyframes dashRect {
+    0% {
+        stroke-dashoffset: 304;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.carousel-indicators li {
+    border: 1px solid $color-basic;
+}
+
+.carousel-indicators .active {
+    background-color: $color-basic;
+}
+/****************************section contact*************************/
+.btn-link {
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    /* border: 1px solid; */
+    /* padding: 4px 0; */
+    transition: 0.2s ease;
+    display: inline-block;
+    width: 128px;
+
+    &--portfolio {
+        right: -13%;
+    }
+}
+
+.title-contact {
+    padding: 20px 0 5px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+/****************************footer****************************/
+footer {
+    background: #333;
+    color: #fff;
+    z-index: 101;
+}
+
+.credit {
+    padding: 13px 0 0;
+    letter-spacing: 0.1em;
+}
+.carousel-indicators {
+    bottom: -52px;
+}
+.icon-footer {
+    padding: 0 14px 10px;
+}
+/********************media query*************************/
+@media (max-width: 767px) {
+    .fa-5x {
+        font-size: 3em;
+    }
+
+    .fa-3x {
+        font-size: 2em;
+    }
+
+    .title-section {
+        font-size: 1.5em;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .subtitle-section {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    hr {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .descripcion {
+        font-size: 1em;
+        margin: 0 1em;
+    }
+ .text-portfolio {
+   font-size: 0.8em;
+ }
+    .pd-section {
+        padding-bottom: 0;
+    }
+
+    .img-slider {
+        height: 8.5em;
+    }
+
+    .carousel-indicators {
+        bottom: -47px;
+    }
+
+    .contact {
+      height: 90vh
+    }
+    .pie{
+      height: 10vh;
+    }
+    .fa-2x {
+    font-size: 1em;
+}
+.credit {
+    padding: 13px 0 0;
+    margin: 0;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+.title-contact {
+    /* padding: 20px 0 5px; */
+    padding: 0;
+    margin: 0;
+  font-size: 0.8em;
+}
+.color {
+    font-size: 0.8em;
+}
+.perfil-img {
+  border-radius: 24%;
+}
+.btn-link{
+  font-size: small;
+}
+
+}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 1200px) {}
