@@ -1,5 +1,5 @@
 document.documentElement.className = 'js';
-/*
+
 window.addEventListener('load', function() {
     $('#preloader').fadeOut('slow');
     $('body').css({
