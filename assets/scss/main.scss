@@ -7,8 +7,25 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.5em !important;
+    overflow: hidden;
+}
+#preloader {
+    position: fixed;
+    top:0; left:0;
+    right:0; bottom:0;
+    background: #fff;
+    z-index: 100;
+}
+#loader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: url(../img/engranaje.gif) no-repeat center 0;
 }
 
+#menu{
+  display: none;
+}
 .title-section {
     font-size: 2em;
 }

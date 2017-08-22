@@ -4,17 +4,17 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
-;(function(window) {
+(function(window) {
 
 	'use strict';
 
 	// Helper vars and functions.
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -112,7 +112,7 @@
 
 	Segmenter.prototype.options = {
 		// Number of pieces.
-		pieces: 4, 
+		pieces: 4,
 		// Show pieces already styled.
 		renderOnLoad: false,
 		// Add an element for the shadow.
@@ -141,7 +141,7 @@
 		onReady: function() { return false; },
 		onAnimationComplete: function() { return false; },
 		onAnimationStart: function() { return false; },
-		// The positions of the pieces in percentage values. 
+		// The positions of the pieces in percentage values.
 		// We can also use random values by setting options.positions to "random".
 		positions: [
 			{top: 80, left: 10, width: 30, height: 20},
@@ -160,11 +160,11 @@
 			width: this.el.offsetWidth,
 			height: this.el.offsetHeight
 		};
-		
+
 		// The source of the main image.
 		var background = this.el.style.backgroundImage;
 		this.imgsrc = background.replace('url(','').replace(')','').replace(/\"/gi, "");;
-		
+
 		// Create the layout.
 		this._layout();
 
@@ -208,7 +208,7 @@
 			}
 
 			segPiecesHTML += '<div class="segmenter__piece-wrap">';
-			
+
 			var top, left, width, height, clipTop, clipLeft, clipRight, clipBottom,
 				pos = i <= positionsTotal - 1 ? i : 0,
 				isRandom = this.options.positions === 'random';
@@ -217,7 +217,7 @@
 			left = isRandom ? anime.random(0,100) : this.options.positions[pos].left;
 			width = isRandom ? anime.random(0,100) : this.options.positions[pos].width;
 			height = isRandom ? anime.random(0,100) : this.options.positions[pos].height;
-			
+
 			if( !clipPath ) {
 				clipTop = isRandom ? top/100 * this.dimensions.height : this.options.positions[pos].top/100 * this.dimensions.height;
 				clipLeft = isRandom ? left/100 * this.dimensions.width : this.options.positions[pos].left/100 * this.dimensions.width;
@@ -226,7 +226,7 @@
 			}
 
 			if( this.options.shadows ) {
-				segPiecesHTML += '<div class="segmenter__shadow" style="top: ' + top + '%; left: ' + left + '%; width: ' + width + '%; height: ' + height + '%"></div>';		
+				segPiecesHTML += '<div class="segmenter__shadow" style="top: ' + top + '%; left: ' + left + '%; width: ' + width + '%; height: ' + height + '%"></div>';
 			}
 
 			segPiecesHTML += clipPath ?
@@ -308,7 +308,7 @@
 				begin: this.options.onAnimationStart,
 				complete: this.options.onAnimationComplete
 			};
-		
+
 		if( this.options.animation.translateZ != undefined ) {
 			var randArr = createRandIntOrderedArray(this.options.animation.translateZ.min, this.options.animation.translateZ.max, this.options.pieces);
 			animProps.translateZ = typeof this.options.animation.translateZ === 'object' ? function(el, index) {
@@ -347,7 +347,7 @@
 	 */
 	Segmenter.prototype._initEvents = function() {
 		var self = this;
-		
+
 		// Window resize.
 		this.debounceResize = debounce(function(ev) {
 			var positionsTotal = self.options.positions.length;
@@ -384,7 +384,7 @@
 			});
 		}, 10);
 		window.addEventListener('resize', this.debounceResize);
-		
+
 		// Mousemove and Deviceorientation:
 		if( this.options.parallax ) {
 			var arrRand = createRandIntOrderedArray(this.options.parallaxMovement.min, this.options.parallaxMovement.max, this.options.pieces);
@@ -414,7 +414,7 @@
 				var y = event.gamma;
 				// To make computation easier we shift the range of x and y to [0,180]
 				y += 90;
-				
+
 				requestAnimationFrame(function() {
 					self.pieces.forEach(function(piece) {
 						var t = piece.getAttribute('data-parallax-translation'),
