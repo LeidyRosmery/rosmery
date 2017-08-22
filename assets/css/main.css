@@ -17,10 +17,12 @@ body {
   z-index: 100; }
 
 #loader {
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 41vh;
+  top: 20%;
+  left: 25%;
   position: absolute;
-  background: url(../img/engranaje.gif) no-repeat center 0; }
+  background: url(../img/loader.gif) no-repeat center 0; }
 
 #menu {
   display: none; }
