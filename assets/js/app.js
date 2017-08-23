@@ -1,7 +1,6 @@
-
+document.documentElement.className = 'js';
 
 window.addEventListener('load', function() {
-  document.documentElement.className = 'js';
     $('#preloader').fadeOut('slow');
     $('body').css({
         'overflow': 'visible'

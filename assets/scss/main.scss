@@ -9,25 +9,30 @@ body {
     font-size: 1.5em !important;
     overflow: hidden;
 }
+
 #preloader {
     position: fixed;
-    top:0; left:0;
-    right:0; bottom:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: #fff;
     z-index: 100;
 }
+
 #loader {
-  width: 50vw;
-  height: 41vh;
-  top: 20%;
-  left: 25%;
-  position: absolute;
-  background: url(../img/loader.gif) no-repeat center 0;
+    width: 50vw;
+    height: 41vh;
+    top: 20%;
+    left: 25%;
+    position: absolute;
+    background: url("../img/loader.gif") no-repeat center 0;
 }
 
-#menu{
-  display: none;
+#menu {
+    display: none;
 }
+
 .title-section {
     font-size: 2em;
 }
@@ -70,14 +75,30 @@ header {
     border-right: 2px solid $color-basic;
 }
 
+.bd-down {
+    border-bottom: 2px solid $color-basic;
+}
+
+.bd-top {
+    border-top: 2px solid $color-basic;
+}
+
 .bd-left {
     border-left: 2px solid $color-basic;
+}
+
+.img-proyecto {
+    height: 200px;
+    width: 45%;
+    border-radius: 76%;
 }
 
 .pd-section {
     padding-bottom: 1.5em;
 }
-
+.item:hover {
+  
+}
 hr {
     border-top: 2px solid $color-basic;
     width: 34%;
@@ -108,7 +129,10 @@ hr {
 }
 
 .portfolio {
-    height: 100vh;
+    height: 160vh;
+}
+.item {
+  padding:  30px 0;
 }
 
 .contact {
@@ -219,9 +243,11 @@ footer {
     padding: 13px 0 0;
     letter-spacing: 0.1em;
 }
+
 .carousel-indicators {
     bottom: -52px;
 }
+
 .icon-footer {
     padding: 0 14px 10px;
 }
@@ -255,9 +281,11 @@ footer {
         font-size: 1em;
         margin: 0 1em;
     }
- .text-portfolio {
-   font-size: 0.8em;
- }
+
+    .text-portfolio {
+        font-size: 0.8em;
+    }
+
     .pd-section {
         padding-bottom: 0;
     }
@@ -271,36 +299,42 @@ footer {
     }
 
     .contact {
-      height: 90vh
+        height: 90vh;
     }
-    .pie{
-      height: 10vh;
-    }
-    .fa-2x {
-    font-size: 1em;
-}
-.credit {
-    padding: 13px 0 0;
-    margin: 0;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-}
-.title-contact {
-    /* padding: 20px 0 5px; */
-    padding: 0;
-    margin: 0;
-  font-size: 0.8em;
-}
-.color {
-    font-size: 0.8em;
-}
-.perfil-img {
-  border-radius: 24%;
-}
-.btn-link{
-  font-size: small;
-}
 
+    .pie {
+        height: 10vh;
+    }
+
+    .fa-2x {
+        font-size: 1em;
+    }
+
+    .credit {
+        padding: 13px 0 0;
+        margin: 0;
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+    }
+
+    .title-contact {
+        /* padding: 20px 0 5px; */
+        padding: 0;
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+    .color {
+        font-size: 0.8em;
+    }
+
+    .perfil-img {
+        border-radius: 24%;
+    }
+
+    .btn-link {
+        font-size: small;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {}
 @media (min-width: 992px) and (max-width: 1199px) {}
