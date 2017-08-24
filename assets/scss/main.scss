@@ -142,12 +142,14 @@ hr {
     -ms-transform: translate(-150px, -90px);
     -webkit-transform: translate(-150px, -90px);
     -ms-transform: scale(0.3, 0.3);
+    transition: all 0.6s;
     -webkit-transform: scale(0.3, 0.3);
     transform: translate(-150px, -90px) scale(0.3, 0.3);
 }
 
 .contenido {
     display: none;
+    transition: all 0.9s;
     position: relative;
     top: -264px;
     text-align: justify;
@@ -157,12 +159,14 @@ hr {
 
 .item:hover .contenido {
     display: block;
+    transition: all 0.6s;
 }
 
 .item:hover .titles {
     -ms-transform: translate(-150px, -100px);
     -webkit-transform: translate(-150px, -100px);
     -webkit-transform: rotate(270deg);
+    transition: all 0.6s;
     -moz-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
@@ -197,18 +201,18 @@ hr {
 }
 /********************************section portfolio****************************/
 .link-portfolio {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  padding: 5px;
-  border: #BE2525 1px solid;
-  display: inline;
-  margin: 17px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border: #BE2525 1px solid;
+    display: inline;
+    margin: 17px;
 }
-.link-portfolio:hover {
-  text-decoration: none;
-  color: $color-basic;
 
+.link-portfolio:hover {
+    text-decoration: none;
+    color: $color-basic;
 }
 
 .rect-case {
@@ -281,10 +285,6 @@ footer {
     letter-spacing: 0.1em;
 }
 
-.carousel-indicators {
-    bottom: -52px;
-}
-
 .icon-footer {
     padding: 0 14px 10px;
 }
@@ -347,20 +347,12 @@ footer {
         margin: 0 1em;
     }
 
-    .text-portfolio {
-        font-size: 0.8em;
-    }
-
     .pd-section {
         padding-bottom: 0;
     }
 
-    .img-slider {
-        height: 8.5em;
-    }
-
-    .carousel-indicators {
-        bottom: -47px;
+    .link-portfolio {
+        margin: 5px;
     }
 
     .contact {
