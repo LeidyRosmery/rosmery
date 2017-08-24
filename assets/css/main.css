@@ -161,8 +161,18 @@ hr {
   100% {
     background-color: #f6a270; } }
 /********************************section portfolio****************************/
-.img-slider {
-  height: 310px; }
+.link-portfolio {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  border: #BE2525 1px solid;
+  display: inline;
+  margin: 17px; }
+
+.link-portfolio:hover {
+  text-decoration: none;
+  color: #BE2525; }
 
 .rect-case {
   stroke: #BE2525; }
@@ -190,12 +200,6 @@ rect[class*="rect-"] {
     stroke-dashoffset: 304; }
   100% {
     stroke-dashoffset: 0; } }
-.carousel-indicators li {
-  border: 1px solid #BE2525; }
-
-.carousel-indicators .active {
-  background-color: #BE2525; }
-
 /****************************section contact*************************/
 .btn-link {
   letter-spacing: 3px;

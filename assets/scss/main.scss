@@ -130,12 +130,12 @@ hr {
 /*.portfolio {
     height: 160vh;
 }*/
-
 .item {
     padding: 30px 0;
 }
-.item:hover{
-  height:  85vh;
+
+.item:hover {
+    height: 85vh;
 }
 
 .item:hover .img-proyecto {
@@ -157,7 +157,6 @@ hr {
 
 .item:hover .contenido {
     display: block;
-
 }
 
 .item:hover .titles {
@@ -197,8 +196,19 @@ hr {
     }
 }
 /********************************section portfolio****************************/
-.img-slider {
-    height: 310px;
+.link-portfolio {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  border: #BE2525 1px solid;
+  display: inline;
+  margin: 17px;
+}
+.link-portfolio:hover {
+  text-decoration: none;
+  color: $color-basic;
+
 }
 
 .rect-case {
@@ -234,14 +244,6 @@ rect[class*="rect-"] {
     100% {
         stroke-dashoffset: 0;
     }
-}
-
-.carousel-indicators li {
-    border: 1px solid $color-basic;
-}
-
-.carousel-indicators .active {
-    background-color: $color-basic;
 }
 /****************************section contact*************************/
 .btn-link {
@@ -289,27 +291,33 @@ footer {
 /********************media query*************************/
 @media (max-width: 767px) {
     .container-item {
-      border-left:none;
-      border-right: none;
-    //  border-bottom: none;
-      border-bottom: 2px solid $color-basic;
+        border-left: none;
+        border-right: none;
+        //  border-bottom: none;
+        border-bottom: 2px solid $color-basic;
     }
-    .item:hover{
-      height:  93vh;
+
+    .item:hover {
+        height: 93vh;
     }
-    .contenido{
-    font-size: 0.9em;
-    width: 64%;
+
+    .contenido {
+        font-size: 0.9em;
+        width: 64%;
     }
+
     .item {
-      //height: 85vh;
+        //height: 85vh;
     }
+
     .item:hover .img-proyecto {
         transform: translate(-110px, -90px) scale(0.3, 0.3);
     }
+
     .item:hover .titles {
         transform: translate(-110px, -100px) rotate(270deg);
     }
+
     .fa-5x {
         font-size: 3em;
     }
